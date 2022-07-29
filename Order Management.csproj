@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{793FD58F-A377-401B-A8EE-1BE0B7B1F088}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Order_Management</RootNamespace>
+    <AssemblyName>Order Management</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://raw.githubusercontent.com/fotoluks/fotoluks.github.io/gh-pages/Installer/</InstallUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/fotoluks/fotoluks.github.io/gh-pages/Installer/</UpdateUrl>
+    <SupportUrl>https://www.notion.so/fotoluks/Order-Management-858713d555a34b4485de06a64e947d2c</SupportUrl>
+    <ProductName>Order Managment</ProductName>
+    <PublisherName>Fotoluks</PublisherName>
+    <SuiteName>Order Managment</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.17.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F2FBA05D099BBD375974BCE86A4B6C217B0843D7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Order Management_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.54.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.54.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.54.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.54.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.54.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.54.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.54.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.54.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.54.0.2397, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.54.0.2397\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.54.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.54.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\Files.cs" />
+    <Compile Include="Database\Synchronization.cs" />
+    <Compile Include="View\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AutoRefresher.cs" />
+    <Compile Include="View\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AllServices.cs" />
+    <Compile Include="Database\Categories.cs" />
+    <Compile Include="Database\Clients.cs" />
+    <Compile Include="Database\Colors.cs" />
+    <Compile Include="Database\Employees.cs" />
+    <Compile Include="Database\Info.cs" />
+    <Compile Include="Database\Orders.cs" />
+    <Compile Include="Database\Server.cs" />
+    <Compile Include="Database\Services.cs" />
+    <Compile Include="Database\Shops.cs" />
+    <Compile Include="Database\Statuses.cs" />
+    <Compile Include="Database\ToDo.cs" />
+    <Compile Include="Model\DownloadFolderPath.cs" />
+    <Compile Include="GoogleDrive\GoogleDriveFiles.cs" />
+    <Compile Include="GoogleDrive\GoogleDriveFilesRepository.cs" />
+    <Compile Include="MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewOrderForm.Designer.cs">
+      <DependentUpon>NewOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SecondaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SecondaryForm.Designer.cs">
+      <DependentUpon>SecondaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServicesTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ServicesTreeForm.Designer.cs">
+      <DependentUpon>ServicesTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\CategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\InterfaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\InterfaceForm.Designer.cs">
+      <DependentUpon>InterfaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\StatusesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\StatusesForm.Designer.cs">
+      <DependentUpon>StatusesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\SystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\SystemForm.Designer.cs">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsForms\TypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SettingsForms\TypeForm.Designer.cs">
+      <DependentUpon>TypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ToDoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ToDoForm.Designer.cs">
+      <DependentUpon>ToDoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Updater.cs" />
+    <Compile Include="View\UserControls\ucUpdater.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ucUpdater.Designer.cs">
+      <DependentUpon>ucUpdater.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewOrderForm.resx">
+      <DependentUpon>NewOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SecondaryForm.resx">
+      <DependentUpon>SecondaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ServicesTreeForm.resx">
+      <DependentUpon>ServicesTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\InterfaceForm.resx">
+      <DependentUpon>InterfaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\StatusesForm.resx">
+      <DependentUpon>StatusesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\SystemForm.resx">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsForms\TypeForm.resx">
+      <DependentUpon>TypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ToDoForm.resx">
+      <DependentUpon>ToDoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ucUpdater.resx">
+      <DependentUpon>ucUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GoogleDrive\client_secret.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Order Management_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportIconOn.png" />
+    <None Include="Resources\exportIconOff.png" />
+    <None Include="Resources\filesListIconOn.png" />
+    <None Include="Resources\bugIconOn.png" />
+    <None Include="Resources\bugIconOff.png" />
+    <None Include="Resources\emloyeeIconOn.png" />
+    <None Include="Resources\emloyeeIconOff.png" />
+    <None Include="Resources\clientsIconOn.png" />
+    <None Include="Resources\clientsIconOff.png" />
+    <None Include="Resources\categoriesIconOn.png" />
+    <None Include="Resources\categoriesIconOff.png" />
+    <None Include="Resources\calendarIconOn.png" />
+    <None Include="Resources\calendarIconOff.png" />
+    <None Include="Resources\addIconOn.png" />
+    <None Include="Resources\whatsAppIconOn.png" />
+    <None Include="Resources\whatsAppIconOff.png" />
+    <None Include="Resources\typesIconOn.png" />
+    <None Include="Resources\typesIconOff.png" />
+    <None Include="Resources\todoIconOn.png" />
+    <None Include="Resources\todoIconOff.png" />
+    <None Include="Resources\systemIconOn.png" />
+    <None Include="Resources\systemIconOff.png" />
+    <None Include="Resources\statusIconOn.png" />
+    <None Include="Resources\statusIconOff.png" />
+    <None Include="Resources\sidebarRightIconOn.png" />
+    <None Include="Resources\sidebarIconOff.png" />
+    <None Include="Resources\settingsIconOn.png" />
+    <None Include="Resources\settingsIconOff.png" />
+    <None Include="Resources\serviceIconOn.png" />
+    <None Include="Resources\serviceIconOff.png" />
+    <None Include="Resources\searchIconOff.png" />
+    <None Include="Resources\saveIconOn.png" />
+    <None Include="Resources\refreshIconOff.png" />
+    <None Include="Resources\orderIconOn.png" />
+    <None Include="Resources\orderIconOff.png" />
+    <None Include="Resources\notificationIconOn.png" />
+    <None Include="Resources\notificationIconOff.png" />
+    <None Include="Resources\logoutIconOn.png" />
+    <None Include="Resources\logoutIconOff.png" />
+    <None Include="Resources\linkOpenIconOn.png" />
+    <None Include="Resources\linkOpenIconOff.png" />
+    <None Include="Resources\interfaceIconOn.png" />
+    <None Include="Resources\interfaceIconOff.png" />
+    <None Include="Resources\folderIconOn.png" />
+    <None Include="Resources\folderAllAddIconOn.png" />
+    <None Include="Resources\folderAllAddIconOff.png" />
+    <None Include="Resources\folderAddIconOn.png" />
+    <None Include="Resources\fileUploadIconOn.png" />
+    <None Include="Resources\fileOpenIconOn.png" />
+    <None Include="Resources\refreshIconOn.png" />
+    <None Include="Resources\ordersIconOff.png" />
+    <None Include="Resources\ordersIconOn.png" />
+    <None Include="Resources\openLinkIconOn.png" />
+    <None Include="Resources\openLinkIconOff.png" />
+    <None Include="Resources\check-circle.png" />
+    <None Include="Resources\warning-blink.gif" />
+    <None Include="Resources\installing-updates.gif" />
+    <None Include="Resources\refreshIcon.png" />
+    <None Include="Resources\urgentlyIcon.png" />
+    <None Include="Resources\allFolderAddIconOn.png" />
+    <None Include="Resources\allFolderAddIconOff.png" />
+    <None Include="Resources\pinIcon.png" />
+    <Content Include="MainIcon.ico" />
+    <None Include="Resources\userIcon.png" />
+    <None Include="Resources\employeeIconOn.png" />
+    <None Include="Resources\employeeIconOff.png" />
+    <None Include="Resources\accountIconOn.png" />
+    <None Include="Resources\accountIconOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
